@@ -1,7 +1,7 @@
 
 menu = [
-  {"path": "/", "name": "Home"},
-  {"path": "/", "name": "About"},
+  {"path": "home", "name": "Home"},
+  {"path": "projects", "name": "Projects"},
 ]
 
 my_projects = [
@@ -10,3 +10,10 @@ my_projects = [
   {'id': 3, 'title': 'third project', 'body': 'this is my third project'},
   {'id': 4, 'title': 'fourth project', 'body': 'this is my fourth project'},
 ]
+
+def get_user_context(**kwargs):
+  context = kwargs
+  context.update({
+    'menu': menu
+  })
+  return context

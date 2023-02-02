@@ -1,10 +1,13 @@
 {% extends 'm/base.html' %}
 
 {% block content %}
-<h1>My projects</h1>
-<ol>
-  {% for p in projects %}
-  <li><a href="{% url 'project' p.id %}">{{ p.title }}</a></li>
-  {% endfor %}
-</ol>
+<div class="container mt-3">
+  <h1 class="fw-bold text-uppercase ">my projects</h1>
+  <!-- Hover added -->
+  <div class="list-group fs-4">
+    {% for p in projects %}
+    <a href="{% url 'project' p.id %}" class="list-group-item list-group-item-action">{{ p.title }}</a>
+    {% endfor %}
+  </div>
+</div>
 {% endblock %}

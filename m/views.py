@@ -1,11 +1,12 @@
 from django.shortcuts import render
 from django.http import HttpResponse, HttpRequest
 
-from .utils import menu, my_projects
+from .utils import menu, my_projects, get_user_context
 
 # Create your views here.
 def home(request):
-  return render(request, 'm/home.html', {"title": 'Home'})
+  context = get_user_context(title = 'Home')
+  return render(request, 'm/home.html', context=context)
 
 def projects(request: HttpRequest):
   return render(request, 'm/projects.html', {'title': 'My projects', 'projects': my_projects, 'menu': menu})
