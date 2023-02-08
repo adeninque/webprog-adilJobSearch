@@ -76,8 +76,12 @@ WSGI_APPLICATION = 'adilJobSearch.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'eflfmqqb', 
+        'USER': 'eflfmqqb',
+        'PASSWORD': 'AEyz-WUYFJfEzkMeYxAlKnoOgwyIUb-1',
+        'HOST': 'snuffleupagus.db.elephantsql.com', 
+        'PORT': '5432',
     }
 }
 
