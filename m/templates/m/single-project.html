@@ -2,11 +2,15 @@
 
 {% block content %}
 <div class="container">
-  <h1>Project {{ project.id }}</h1>
   <div class="card w-100">
     <div class="card-body">
       <h5 class="card-title">{{ project.title }}</h5>
       <h6 class="card-subtitle mb-2 text-muted">{{ project.body }}</h6>
+      <p class="m-0">Tags: 
+        {% for t in  project.tags.all %}
+        <span class="border px-2 py-1 rounded border-primary">{{ t.name }}</span>
+        {% endfor %}
+      </p>
     </div>
   </div>
 </div>

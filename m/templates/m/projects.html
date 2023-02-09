@@ -6,7 +6,7 @@
   <!-- Hover added -->
   <div class="list-group fs-4">
     {% for p in projects %}
-    <a href="{% url 'project' p.id %}" class="list-group-item list-group-item-action">{{ p.title }}</a>
+    <a href="{{ p.get_absolute_url }}" class="list-group-item list-group-item-action">{{ p.title }}</a>
     {% endfor %}
   </div>
 </div>
